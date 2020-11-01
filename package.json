@@ -1,0 +1,16 @@
+{
+  "name": "REIQTask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-spreadsheet": "^3.0.13",
+    "node-zillow": "^2.0.0"
+  }
+}
