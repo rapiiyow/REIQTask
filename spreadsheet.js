@@ -6,15 +6,15 @@ const doc = new GoogleSpreadsheet('1-DCtBRkmS-kMQQMq5N1bs7rmn49HHpj-9DKDMg6rkzw'
 const zillow = new Zillow(creds.zillow_key);
 
 async function accessSpreadsheet() {
-  await doc.useServiceAccountAuth({
+  await doc.useServiceAccountAuth({ 
     client_email: creds.client_email,
     private_key: creds.private_key,
   });
 
   await doc.loadInfo(); // loads document properties and worksheets
 
-  const sheet = doc.sheetsByIndex[0]; 
-  const rows = await sheet.getRows(); 
+  const sheet = doc.sheetsByIndex[0]; // get the desired sheet on the spread sheet
+  const rows = await sheet.getRows(); // get the rows of the sheet
 
   rows.forEach(rows => { //Iterate over rows to get the data per row
     
